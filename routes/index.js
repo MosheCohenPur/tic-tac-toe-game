@@ -22,7 +22,6 @@ let unmatched;
 const winCordenation = ['XXX', 'OOO'];
 
 const isGameOver = (board) => {
-  console.log(board[0].join(''))
   // possible winning combination
   const boardOptions = [
     board[0].join(''),
