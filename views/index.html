@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Tic Tac Toe GAME</title>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="vendors/angular-1.8.0/angular.js"></script>
+  <script src="vendors/jquery-3.5.1.min.js"></script>
+  <script src="javascripts/indexApp.js"></script>
+  <link href="stylesheets/style.css" rel="stylesheet">
+</head>
+
+<body ng-app="indexApp" ng-controller="indexCtrl">
+  <h1 style="text-align:center">{{message}}</h1>
+  <h1 style="text-align:center" ng-bind="turnMessage"></h1>
+  <button ng-repeat="cell in board[0] track by $index" ng-click="makeTurn([0, $index])">{{cell || '-'}}</button>
+  <br />
+  <button ng-repeat="cell in board[1] track by $index" ng-click="makeTurn([1, $index])">{{cell || '-'}}</button>
+  <br />
+  <button ng-repeat="cell in board[2] track by $index" ng-click="makeTurn([2, $index])">{{cell || '-'}}</button>
+</body>
+
+</html>
